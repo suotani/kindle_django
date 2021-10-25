@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{% block main %}
+<table class="table table-hover">
+  <tr>
+    <th>ID</th><th>Score</th><th>Title</th><th>Links</th>
+  </tr>
+  {% for note in note_list %}
+    <tr>
+      <td>{{note.id}}</td>
+      <td>{{note.get_score_display}}</td>
+      <td>{{note.title}}</td>
+      <td>
+        <a href="{% url 'note_detail' note.id %}" class="btn btn-info">詳細</a>
+        <a href="{% url 'note_update' note.id %}" class="btn btn-primary" >更新</a>
+        <a href="{% url 'note_delete' note.id %}" class="btn btn-danger" onclick="return confirm('本当に削除しますか？');">削除</a>
+      </td>
+    </tr>
+  {% endfor %}
+</table>
+{% endblock %}

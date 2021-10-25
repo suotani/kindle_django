@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+{% block main %}
+<h2>Detail</h2>
+<table class="table table-striped">
+  <tr>
+    <th>ID</th>
+    <td>{{note.id}}
+  </tr>
+
+  <tr>
+    <th>Title</th>
+    <td>{{note.title}}
+  </tr>
+
+  <tr>
+    <th>Score</th>
+    <td>{{note.get_score_display}}
+  </tr>
+</table>
+
+<h2>Text</h2>
+<p>{{note.text}}</p>
+
+<a href="{% url 'note_list' %}" class="btn btn-secondary">戻る</a>
+{% endblock %}

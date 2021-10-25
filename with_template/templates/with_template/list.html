@@ -1,0 +1,31 @@
+<ul>
+{% for num in numbers %}
+    <li>{{num}}</li>
+{% endfor %}
+</ul>
+
+<style>
+ul{
+    display: flex;
+    flex-wrap: wrap;
+    width: 400px;
+    list-style: none;
+
+}
+
+li{
+    width: 100px;
+    height: 100px;
+    text-align: center;
+    border: solid 1px black;
+    line-height: 100px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    box-shadow: 3px 3px;
+    cursor: pointer;
+}
+li:hover{
+    box-shadow: 1px 1px;
+}
+</style>

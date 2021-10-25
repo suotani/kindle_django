@@ -1,0 +1,14 @@
+
+<ul>
+{% for num in list %}
+    {% if num|divisibleby:15 %}
+      <li>FizzBuzz</li>
+    {% elif num|divisibleby:3 %}
+      <li>Fizz</li>
+    {% elif num|divisibleby:5 %}
+      <li>Buzz</li>
+    {% else %}
+      <li>{{num}}</li>
+    {% endif %}
+{% endfor %}
+</ul>

@@ -1,0 +1,6 @@
+<form action="{% url 'form_read' %}" method="POST">
+  {% csrf_token %}
+  <label>name</label>
+  <input type="text" name="input_name">
+  <input type="submit" value="送信">
+</form>
